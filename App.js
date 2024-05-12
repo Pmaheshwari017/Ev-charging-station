@@ -81,12 +81,12 @@ export default function App() {
         <View style={{ flex: 1 }} >
           <StatusBar style="auto" />
           <SignedIn>
-            <LoginScreen />
-          </SignedIn>
-          <SignedOut>
             <NavigationContainer>
               <TabNavigation />
             </NavigationContainer>
+          </SignedIn>
+          <SignedOut>
+            <LoginScreen />
           </SignedOut>
         </View>
       </UserLocationContext.Provider>
