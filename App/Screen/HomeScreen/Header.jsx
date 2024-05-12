@@ -6,9 +6,9 @@ import { Colors } from '../../../utilities/Color'
 
 const Header = () => {
     const { user } = useUser()
-    console.log("🚀 ~ Header ~ user:", JSON.stringify(user, null, 2))
+    // console.log("🚀 ~ Header ~ user:", JSON.stringify(user, null, 2))
     return (
-        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: "center" }}>
+        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", marginHorizontal: 20 }}>
             <Image source={{ uri: user?.imageUrl }}
                 style={{
                     width: 40,

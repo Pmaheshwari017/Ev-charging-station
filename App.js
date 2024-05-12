@@ -78,20 +78,17 @@ export default function App() {
       tokenCache={tokenCache}
       publishableKey={'pk_test_c3dlZXBpbmctdGl0bW91c2UtMjEuY2xlcmsuYWNjb3VudHMuZGV2JA'}>
       <UserLocationContext.Provider value={{ location, setLocation }}>
-        <SafeAreaView style={{ flex: 1 }} >
+        <View style={{ flex: 1 }} >
           <StatusBar style="auto" />
           <SignedIn>
             <LoginScreen />
           </SignedIn>
           <SignedOut>
-
             <NavigationContainer>
               <TabNavigation />
             </NavigationContainer>
-
-
           </SignedOut>
-        </SafeAreaView>
+        </View>
       </UserLocationContext.Provider>
 
     </ClerkProvider >
