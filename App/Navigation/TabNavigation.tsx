@@ -15,6 +15,7 @@ const TabNavigdation = () => {
     return (
         <buttomTab.Navigator screenOptions={{
             headerShown: false,
+            tabBarHideOnKeyboard: true,
         }}>
             <buttomTab.Screen name="Home" component={HomeScreen}
                 options={{
