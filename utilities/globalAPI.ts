@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "https://places.googleapis.com/v1/places:searchNearby";
 
-const PROD = false;
+const PROD = true;
 export const API_KEY = PROD ? "AIzaSyBUxiSuS1uiV6RsT3XrBxIDV3nnYVYx8MQ" : "";
 
 const config = {
@@ -15,7 +15,7 @@ const config = {
       "places.location",
       "places.evChargeOptions",
       "places.shortFormattedAddress",
-      "places.photos",
+      "places.photos,places.id",
     ],
   },
 };

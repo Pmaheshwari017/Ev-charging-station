@@ -4,7 +4,7 @@ import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplet
 import { UserLocationContext } from "../../context/UserLocationContext";
 const PROD = false;
 const API = PROD ? "AIzaSyBUxiSuS1uiV6RsT3XrBxIDV3nnYVYx8MQ" : "";
-const SearchBar = ({ seleLocation }) => {
+const SearchBar = ({ searchLocation }) => {
   const { location, setLocation } = useContext(UserLocationContext);
   console.log("🚀 ~ SearchBar ~ location:", location);
   return (
