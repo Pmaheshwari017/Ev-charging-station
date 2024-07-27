@@ -1,4 +1,5 @@
 import {
+  ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
   StyleSheet,
@@ -15,7 +16,7 @@ import PlaceListView from "./placeListView";
 import { Data } from "../../../dummyData";
 import { SelectedMarkerContext } from "../../context/SelectedMarkerContext";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const { location, setLocation } = useContext(UserLocationContext);
   console.log("🚀 ~ HomeScreen ~ location:", location);
   const [placeList, setPlaceList] = useState([]);
@@ -54,13 +55,18 @@ const HomeScreen = () => {
     >
       <View>
         <View style={styles.headerContainer}>
-          <Header />
-          <SearchBar
-            searchLocation={(location) => () => {
-              console.log("🚀 ~ HomeScreen ~--- location:", location);
-              return setLocation(location);
-            }}
-          />
+          <View style={{ marginTop: -8 }}>
+
+            <Header />
+          </View>
+          <View style={{ marginTop: -6 }}>
+            <SearchBar
+              searchLocation={(location: any) => () => {
+                console.log("🚀 ~ HomeScreen ~--- location:", location);
+                return setLocation(location);
+              }}
+            />
+          </View>
         </View>
         <MapAppView placeList={placeList} />
         <KeyboardAvoidingView

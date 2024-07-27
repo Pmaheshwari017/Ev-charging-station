@@ -3,8 +3,8 @@ import React, { useContext } from "react";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { UserLocationContext } from "../../context/UserLocationContext";
 const PROD = false;
-const API = PROD ? "ENTER GOOGLE API KEY" : "";
-const SearchBar = ({ seleLocation }) => {
+const API = PROD ? "ENTER YOUR GOOGLE API KEY" : "";
+const SearchBar = ({ searchLocation }) => {
   const { location, setLocation } = useContext(UserLocationContext);
   console.log("🚀 ~ SearchBar ~ location:", location);
   return (
