@@ -30,7 +30,6 @@ const Header = () => {
             width: 43,
             height: 43,
             borderRadius: 20,
-            // borderColor: Colors.PRIMARY,
             borderWidth: 2,
           }}
         />

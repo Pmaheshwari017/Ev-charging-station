@@ -29,7 +29,6 @@ import placeItem from "./placeItem";
 import { Colors } from "../../../utilities/Color";
 
 const placeListView = ({ placeList }) => {
-  // console.log("🚀 ~ placeListView ~ placeList:", JSON.stringify(placeList, null, 2))
   const [favList, SetfavList] = useState([]);
   const [loading, setLoading] = useState(true);
   const { selectedMarker, setSelectedMarker } = useContext(
