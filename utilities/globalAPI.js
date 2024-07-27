@@ -3,7 +3,7 @@ import axios from "axios";
 const BASE_URL = "https://places.googleapis.com/v1/places:searchNearby";
 
 const PROD = false;
-export const API_KEY = PROD ? "AIzaSyBUxiSuS1uiV6RsT3XrBxIDV3nnYVYx8MQ" : "";
+export const API_KEY = PROD ? "ENTER GOOGLE API KEY" : "";
 
 const config = {
   headers: {
