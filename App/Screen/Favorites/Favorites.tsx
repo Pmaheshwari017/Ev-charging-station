@@ -31,7 +31,6 @@ const Favorites = () => {
     querySnapshot.forEach((doc) => {
       SetfavList((favList) => [...favList, doc?.data()]);
     });
-    // setForceRender(true);
     setLoading(false);
   };
   useEffect(() => {
@@ -39,17 +38,11 @@ const Favorites = () => {
       setForceRender(false);
     }
   });
-  const isFav = (place) => {
-    // console.log("🚀 ~ isFav ~ place:", JSON.stringify(place, null, 2));
-    // console.log("🚀 ~ result ~ favList:", JSON.stringify(favList, null, 2));
-
+  const isFav = (place: any) => {
     const result = favList.find((item) => {
-      // console.log("🚀 ~ resulfft ~ item:", JSON.stringify(item, null, 2));
-      // console.log("🚀 ~ result ~ item.id == place.id;:", item.id == place.id);
       return item.id == place.id;
     });
     console.log("🚀 ~ result ~ resffult:", result ? true : false);
-    // return result;
     return result ? true : false;
   };
 

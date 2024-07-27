@@ -55,13 +55,18 @@ const HomeScreen = ({ navigation }) => {
     >
       <View>
         <View style={styles.headerContainer}>
-          <Header />
-          <SearchBar
-            searchLocation={(location: any) => () => {
-              console.log("🚀 ~ HomeScreen ~--- location:", location);
-              return setLocation(location);
-            }}
-          />
+          <View style={{ marginTop: -8 }}>
+
+            <Header />
+          </View>
+          <View style={{ marginTop: -6 }}>
+            <SearchBar
+              searchLocation={(location: any) => () => {
+                console.log("🚀 ~ HomeScreen ~--- location:", location);
+                return setLocation(location);
+              }}
+            />
+          </View>
         </View>
         <MapAppView placeList={placeList} />
         <KeyboardAvoidingView

@@ -117,9 +117,9 @@ const placeItem = ({ place, isFavItem, getMarkFav }) => {
           <TouchableOpacity onPress={handleFav}>
             {/* {console.log("---sdfdsfdf-----", isFavItem)} */}
             {isfavDelete ? (
-              <Ionicons name="heart" size={35} color={Colors.PRIMARY} />
+              <Ionicons name="heart" size={35} color={Colors.RED} />
             ) : (
-              <Ionicons name="heart-outline" size={35} color={Colors.WHITE} />
+              <Ionicons name="heart-outline" size={35} color={Colors.RED} />
             )}
           </TouchableOpacity>
         )}
@@ -128,9 +128,9 @@ const placeItem = ({ place, isFavItem, getMarkFav }) => {
         style={{
           width: Dimensions.get("screen").width * 0.9,
           marginRight: 23,
-          // backgroundColor: 'white',
           borderRadius: 50,
-          marginBottom: 27,
+          // height: '80%',
+          marginBottom: -10,
           marginHorizontal: 20,
           // marginRight: 5
         }}
